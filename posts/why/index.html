@@ -9,11 +9,30 @@
     </head>
     <body>
         <div class="post-body">
+            <h2>Why have I done this?</h2>
             I've been putting things on the internet for a long time. I've used
             some amazing sites - bio.link and substack as well as discord and of
             course tiktok. The thing is...sometime you just need a place that
             you call home. Something that loads fast, doesn't spam people and
             gets the point across with no bullshit. that's what this is.
+
+            <h2>How does this work?</h2>
+            This website is built in pure HTML and CSS. It's hosted on github
+            and uses their github pages feature to serve the site. I've used
+            vanilla JavaScript to poll the GitHub API and return a list of all
+            the items in the /posts directory. I then use this list to populate
+            the posts list on the homepage. There's also a secondary script that
+            runs on the post pages themselves which handles the title, back
+            button and the date formatting. I wanted to be able to add pages to
+            the site with no CMS, from any device, so having this additional
+            script allows me to clumsily add new posts without having to worry
+            about the formatting.
+
+            <br />
+            anyway enough about that, go and use
+            <a href="https://carter.chat?utm_source=huwprosser.github.io"
+                >carter.chat</a
+            >.
         </div>
     </body>
     <script src="/post.js"></script>

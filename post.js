@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let backButton = document.createElement("a");
     backButton.href = "/";
-    backButton.innerHTML = "← posts";
+    backButton.innerHTML = "← huwprosser.github.io";
     headDiv.appendChild(backButton);
 
     let postTitle = document.createElement("h1");
