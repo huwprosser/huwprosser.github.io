@@ -8,69 +8,53 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((directories) => {
             const postsList = document.querySelector("ul");
-            postsList.innerHTML = "";
 
-            const items = [];
-
-            directories.map((directory) => {
+            directories = directories.map(async (directory) => {
                 let directoryName = directory.name;
                 let file = `/posts/${directoryName}/index.html`;
 
-                // read the file's title tag
-                fetch(file)
-                    .then((response) => {
-                        return response.text();
+                let data = await fetch(file);
+                let html = await data.text();
+
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, "text/html");
+                let title = doc.querySelector("title").innerText;
+
+                let date = doc.querySelector("meta[name='date']").content;
+
+                return {
+                    title: title,
+                    date: date,
+                    name: directoryName,
+                };
+            });
+
+            Promise.all(directories).then((directories) => {
+                directories
+                    .sort(function (a, b) {
+                        return new Date(b.date) - new Date(a.date);
                     })
-                    .then((html) => {
-                        let parser = new DOMParser();
-                        let doc = parser.parseFromString(html, "text/html");
-                        let title = doc.querySelector("title").innerText;
+                    .forEach((item) => {
+                        const listItem = document.createElement("li");
+                        const postLink = document.createElement("a");
+                        const span = document.createElement("span");
 
-                        try {
-                            let date =
-                                doc.querySelector("meta[name='date']").content;
+                        postLink.href = `/${DIR}/${item.name}/`;
+                        postLink.innerText = `${item.title}`;
 
-                            items.push({
-                                title: title,
-                                date: date,
-                                name: directoryName,
-                            });
-                        } catch (error) {
-                            console.log(doc);
-                            console.error(error);
-                        }
+                        span.classList.add("date");
+                        span.innerText = ` ${new Date(
+                            item.date
+                        ).toLocaleDateString("en-GB", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                        })}`;
+
+                        listItem.appendChild(postLink);
+                        listItem.appendChild(span);
+                        postsList.appendChild(listItem);
                     });
-
-                return;
-            });
-
-            // sort the posts by date
-            items.sort(function (a, b) {
-                return new Date(b.date) - new Date(a.date);
-            });
-
-            // add the posts to the DOM
-            items.forEach((item) => {
-                const listItem = document.createElement("li");
-                const postLink = document.createElement("a");
-                const span = document.createElement("span");
-
-                postLink.href = `/${DIR}/${item.name}/`;
-                postLink.innerText = `${item.title}`;
-
-                span.classList.add("date");
-                span.innerText = ` ${new Date(item.date).toLocaleDateString(
-                    "en-GB",
-                    {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                    }
-                )}`;
-
-                listItem.appendChild(postLink);
-                listItem.appendChild(span);
-                postsList.appendChild(listItem);
             });
         })
         .catch((error) => console.error("Error fetching posts:", error));
