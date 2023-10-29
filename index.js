@@ -10,64 +10,68 @@ document.addEventListener("DOMContentLoaded", function () {
             const postsList = document.querySelector("ul");
             postsList.innerHTML = "";
 
-            let directoryName = directories[0].name;
-            let file = `/posts/${directoryName}/index.html`;
+            const items = [];
 
-            // read the file's title tag
-            fetch(file)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((html) => {
-                    let parser = new DOMParser();
-                    let doc = parser.parseFromString(html, "text/html");
-                    let title = doc.querySelector("title").innerText;
-                    // get date using the post's meta tag
-                    let date = doc.querySelector("meta[name='date']").content;
+            directories.map((directory) => {
+                let directoryName = directory.name;
+                let file = `/posts/${directoryName}/index.html`;
 
-                    const listItem = document.createElement("li");
-                    const postLink = document.createElement("a");
-                    const span = document.createElement("span");
+                // read the file's title tag
+                fetch(file)
+                    .then((response) => {
+                        return response.text();
+                    })
+                    .then((html) => {
+                        let parser = new DOMParser();
+                        let doc = parser.parseFromString(html, "text/html");
+                        let title = doc.querySelector("title").innerText;
 
-                    postLink.href = `/${DIR}/${directoryName}/`;
-                    postLink.innerText = `${title}`;
+                        try {
+                            let date =
+                                doc.querySelector("meta[name='date']").content;
 
-                    span.classList.add("date");
-                    span.innerText = ` ${new Date(date).toLocaleDateString(
-                        "en-GB",
-                        {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
+                            items.push({
+                                title: title,
+                                date: date,
+                                name: directoryName,
+                            });
+                        } catch (error) {
+                            console.log(doc);
+                            console.error(error);
                         }
-                    )}`;
+                    });
 
-                    listItem.appendChild(postLink);
-                    listItem.appendChild(span);
-                    postsList.appendChild(listItem);
-                });
+                return;
+            });
 
-            // const posts = directories.map((directory) => {
-            //     let title = directory.name.split("-").slice(3).join("-");
-            //     let date = directory.name.split("-").slice(0, 3).join("-");
+            // sort the posts by date
+            items.sort(function (a, b) {
+                return new Date(b.date) - new Date(a.date);
+            });
 
-            //     const listItem = document.createElement("li");
-            //     const postLink = document.createElement("a");
+            // add the posts to the DOM
+            items.forEach((item) => {
+                const listItem = document.createElement("li");
+                const postLink = document.createElement("a");
+                const span = document.createElement("span");
 
-            //     postLink.href = `/${DIR}/${directory.name}/`;
-            //     postLink.innerText = `${title.replace(/-/g, " ")}`;
+                postLink.href = `/${DIR}/${item.name}/`;
+                postLink.innerText = `${item.title}`;
 
-            //     listItem.appendChild(postLink);
+                span.classList.add("date");
+                span.innerText = ` ${new Date(item.date).toLocaleDateString(
+                    "en-GB",
+                    {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    }
+                )}`;
 
-            //     let span = document.createElement("span");
-            //     span.classList.add("date");
-            //     span.innerText = ` (${date.replace(/-/g, "/")})`;
-
-            //     listItem.appendChild(span);
-            //     postsList.appendChild(listItem);
-            // });
-
-            return Promise.all(posts);
+                listItem.appendChild(postLink);
+                listItem.appendChild(span);
+                postsList.appendChild(listItem);
+            });
         })
         .catch((error) => console.error("Error fetching posts:", error));
 });
