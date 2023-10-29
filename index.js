@@ -18,9 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 const postLink = document.createElement("a");
 
                 postLink.href = `/${DIR}/${directory.name}/`;
-                postLink.innerText = `${title.replace("-", " ")} (${date})`;
+                postLink.innerText = `${title.replace(/-/g, " ")}`;
 
                 listItem.appendChild(postLink);
+
+                let span = document.createElement("span");
+                span.classList.add("date");
+                span.innerText = ` (${date.replace(/-/g, "/")})`;
+
+                listItem.appendChild(span);
                 postsList.appendChild(listItem);
             });
 
