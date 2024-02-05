@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Building JARVIS in Real Life</title>
+        <meta name="date" content="2022-05-26" />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <div class="post-body">
+            <img
+                src="/posts/building-jarvis-in-real-life/jarvis-cover.png"
+                alt=""
+            />
+            <p>
+                I've been attempting to build JARVIS from Iron Man in real life
+                as a personal project, in the same way a cosplay fan might dress
+                as Tony Stark, my inner engineer decided to go a
+                slightly...different route. It's my belief that the MARVEL films
+                have inspired a whole new generation of engineers, computer
+                scientists and 'builders'. It's a great honour to be one of
+                them. Anyway, let's get into today's topic. While Alexa, Google
+                Assistant...Bixby, all have in common is that they don't live on
+                your device. They live in 'the cloud'. The Cloud is just a
+                datacentre, or group of datacentres with servers that you can
+                rent and tailor to your specific requirements. Perhaps one of
+                the most exciting things about cloud services is the ability to
+                host an always on service for almost no cost. Training ML models
+                is a different story but running inference can be done for
+                little cost and with good enough performance for what I wanted
+                to achieve with my JARVIS project. So, how does my JARVIS work?
+                In this post I wanted to detail the layout of JARVIS, his high
+                level structure but also what's going on in 'the cloud'. Let's
+                start with the high-level view.
+            </p>
+
+            <h2>High-Level View</h2>
+            <div class="high-level">
+                <p>
+                    When designing JARVIS, I wanted it to have a server/client
+                    architecture. This was directly inspired by my professional
+                    work as a ML web app developer. There's also this awesome
+                    scene in Iron Man 3 where Pepper Potts is left a message by
+                    Tony after his Mansion has been destroyed by The Mandarin.
+                    The words "Stark secure server" have been embedded in the
+                    back of my brain ever since, it's the first time we see one
+                    of Tony Stark's systems reference a remote datacentre, not
+                    the Oracle servers we see buzzing away in Tony Stark's
+                    basement. Back in the real world, we have better technology
+                    than what we see in the movies. It's more industrialised and
+                    much too technical even for a film like Iron Man to get
+                    right.
+                </p>
+                <img
+                    src="/posts/building-jarvis-in-real-life/jarvis-architecture-old.png"
+                    alt="JARVIS Architecture"
+                />
+                You should quickly notice that, while the brains of JARVIS sit
+                in the cloud, his input and output is actually modular. The
+                Mobile App (not yet complete), allows me to talk to JARVIS on
+                the go. The UI client can be any "Web Frame" (Internet enabled
+                display). The Voice capture module can be a headless Raspberry
+                Pi with a simple Microphone array and Wi-Fi connection. Moving
+                onto the audio output, again in theory a headless Raspberry Pi
+                with Wi-Fi and an audio card or speak system. A complete Web App
+                acts as everything above, a system I can log into anywhere in
+                the world and gain access to my JARVIS account. Finally by
+                connecting JARVIS to several IP enabled cameras, he can "watch"
+                my office, home and anywhere else I desire, feeding back
+                information to the other devices. Output can then be sent to any
+                UI client or Audio output module. This is the ultimate design
+                "Cocoon" of technology. Taking the concept of modular
+                input/output a little further, it's definitely a lot easier to
+                bring this version of JARVIS into future technologies such as
+                augmented and virtual reality or who knows, maybe even a
+                Neuralink device.
+            </div>
+
+            <h2>The Server</h2>
+            <div class="server">
+                <img
+                    src="/posts/building-jarvis-in-real-life/backend.png"
+                    alt="JARVIS Backend"
+                />
+                <p>
+                    This is relatively straightforward to understand. We have
+                    two key parts. The serverless database hosted by MongoDB's
+                    Atlas service, and of course the main server. Currently
+                    hosted on AWS but easily migratable to Heroku, Azure or GCP.
+                    The entire server is packaged up as a Docker image. This
+                    allows for multiple JARVIS servers to potentially be online
+                    at once, but also allows for easy migration between cloud
+                    providers. Within the Docker container, you can see that the
+                    server's core modules have been highlighted. Speech-to-text
+                    is an API end point, minimising the size of communication
+                    turns (and hosting fees). The NLP engine (a whole other post
+                    in itself), acts as the main conversation engine. The
+                    background worker gives JARVIS the ability to carry out
+                    tasks without being prompted and then send through
+                    notifications and alerts when needed. The skills engine
+                    gives JARVIS the ability to trigger different "apps"
+                    quickly. They can also be run by the background worker. For
+                    example, weather, news, email, Asana, GitHub actions etc.
+                    The database handler simply performs CRUD operations on
+                    behalf of JARVIS to log conversation history and build up a
+                    knowledgebase that can be used for training -certainly more
+                    to do here. The vision module is a collection of vision
+                    capabilities for image and video stream processing, giving
+                    him the ability to recognise objects, people and even track
+                    hand movement etc. The final module is the text-to-speech
+                    module, which of course uses a custom Tacotron2 model to
+                    generate a Mel-Spectogram and then uses Hi-Fi GAN to convert
+                    the Mel-Spectogram to an audio file which can then be
+                    streamed back to the user via an API endpoint.
+                </p>
+            </div>
+
+            <p>Build neat stuff 🚀</p>
+
+            <p>Huw</p>
+        </div>
+    </body>
+    <script src="/post.js"></script>
+</html>
