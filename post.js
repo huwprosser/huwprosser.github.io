@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let backButton = document.createElement("a");
     backButton.href = "/";
-    backButton.innerHTML = "← huwprosser.github.io";
+    backButton.innerHTML = "← Back to home";
     headDiv.appendChild(backButton);
 
     let postTitle = document.createElement("h1");
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let postDate = document.createElement("p");
     postDate.className = "date";
     postDate.innerText = formattedDate;
+
     headDiv.appendChild(postDate);
 
     // Insert the head div at the top of the .post-body div

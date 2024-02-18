@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(API_ENDPOINT)
         .then((response) => response.json())
         .then((directories) => {
-            const postsList = document.querySelector("ul");
+            const postsList = document.getElementById("posts-list");
 
             directories = directories.map(async (directory) => {
                 let directoryName = directory.name;

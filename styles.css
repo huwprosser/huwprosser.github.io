@@ -1,13 +1,44 @@
 @font-face {
-    font-family: "Libre Baskerville";
-    src: url("LibreBaskerville-Regular.ttf") format("truetype"),
-        url("LibreBaskerville-Bold.ttf") format("truetype"),
-        url("LibreBaskerville-Italic.ttf") format("truetype");
-    font-weight: normal;
+    font-family: "Menlo Regular";
     font-style: normal;
+    font-weight: normal;
+    src: local("Menlo Regular"), url("./Menlo-Regular.woff") format("woff");
+}
+.inter-regular {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
 }
 * {
-    font-family: Libre Baskerville, sans-serif;
+    font-family: "Menlo Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.head {
+    margin-top: 20px;
+}
+
+.home-body {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 .post-body {
     max-width: 800px;
@@ -21,6 +52,7 @@
 
 .date {
     color: #999;
+    margin: 0px;
 }
 
 ul li {
