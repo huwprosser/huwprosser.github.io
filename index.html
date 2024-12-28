@@ -23,72 +23,285 @@
             }
         </script>
         <link rel="stylesheet" href="/styles.css" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Inter:wght@100..900&family=Outfit:wght@300&display=swap");
-        </style>
-
-        <!-- description  -->
-        <meta
-            name="description"
-            content="building things with ai since 2008. Thank tony stark for that. these days i'm focused on putting eq in ai at Carter Labs and making it available to everyone through carter.chat"
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         />
     </head>
     <body>
-        <h1 style="text-align: center">Hello 👋, I'm Huw.</h1>
-        <h3 style="text-align: center">
-            "Contrary to Popular Belief, I Know Exactly What I'm Doing."
-        </h3>
+        <table class="header">
+            <tr>
+                <td colspan="2" rowspan="2">
+                    <h1 class="title">Huw Prosser</h1>
+                    <p class="subtitle minor-text">
+                        Building things with AI since 2008
+                    </p>
+                </td>
+                <th>Age</th>
+                <td class="minor-text">26</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td class="minor-text">London, UK</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td class="minor-text">
+                    Machine Learning Engineer, Founder, Content Creator
+                </td>
+                <th>Current</th>
+                <td class="minor-text">
+                    <a href="https://carter.chat" target="_blank"
+                        >Carter Labs</a
+                    >
+                </td>
+            </tr>
+        </table>
+        <div class="social-grid">
+            <a href="https://www.threads.net/@huwprosser" class="bio-link">
+                <div><i class="fa-brands fa-threads"></i> threads</div>
+            </a>
+            <a href="https://www.youtube.com/@huwprosser" class="bio-link">
+                <div><i class="fa-brands fa-youtube"></i> youtube</div>
+            </a>
+            <a href="https://tiktok.com/@huwprosser" class="bio-link">
+                <div><i class="fa-brands fa-tiktok"></i> tiktok</div>
+            </a>
+            <a href="https://github.com/huwprosser" class="bio-link">
+                <div><i class="fa-brands fa-github"></i> github</div>
+            </a>
+        </div>
+        <div class="content">
+            <p class="subtitle projects-title">PROJECTS</p>
+            <!-- Carter Labs  -->
+            <table class="project">
+                <colgroup>
+                    <col span="5" width="16.67%" />
+                    <col width="16.67%" />
+                </colgroup>
+                <tr>
+                    <th colspan="5">
+                        <h4 class="project-title">Carter Labs</h4>
+                    </th>
 
-        <p style="text-align: center">
-            building ai since 2008. Thank
-            <a href="https://youtu.be/qRTvZfB0UoA?si=H98rZQXk-cenR5oc&t=2"
-                >tony stark</a
-            >
-            for that.
-        </p>
-        <p style="text-align: center">
-            these days i'm building the best ai character RPG platform
-            <a href="https://carter.chat?utm_source=huwprosser.github.io"
-                >carter.chat</a
-            >
-        </p>
+                    <td colspan="1">
+                        <p class="project-description pad-5">Est. 2022</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="project-content">
+                            <p class="project-description">
+                                A UK-based startup founded in 2022 (pre-ChatGPT)
+                                to explore how AI could be used in video games
+                                via an API. Gaining fast prosumer adoption we
+                                raised a
+                                <a
+                                    href="https://www.uktech.news/ai/carter-pre-seed-20221220"
+                                    target="_blank"
+                                    >$2-million pre-seed</a
+                                >. We discovered that AI characters were an
+                                incredibly compelling experience outside of
+                                games too. Our latest direct-to-consumer app and
+                                website, carter.chat allows users to create,
+                                meet and share characters powered by
+                                state-of-the-art AI.
+                            </p>
 
-        <p style="text-align: center">
-            11,000,000+ people are watching my 
-            <a href="https://tiktok.com/@huwprosser">jarvis build</a>
-        </p>
-        
+                            <a
+                                class="button"
+                                target="_blank"
+                                href="https://carter.chat?utm_source=huwprosser.github.io"
+                            >
+                                VISIT SITE
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-        <p style="text-align:center;">
-            <a href="https://www.threads.net/@huwprosser">threads</a>
-            <a href="https://www.youtube.com/@huwprosser">youtube</a>
-            <a href="https://tiktok.com/@huwprosser">tiktok</a>
-            <a href="https://github.com/huwprosser">github</a>
-            <!-- <a href="https://discord.gg/MQD2aAeRfX">discord</a> -->
-        </p>
+            <!-- Jarvis  -->
+            <table class="project">
+                <colgroup>
+                    <col span="5" width="16.67%" />
+                    <col width="16.67%" />
+                </colgroup>
+                <tr>
+                    <th colspan="5">
+                        <h4 class="project-title">
+                            J.A.R.V.I.S - In Real Life
+                        </h4>
+                    </th>
 
-        <h2 style="padding-top: 40px">side projects</h2>
-        <ul style="list-style: none; padding: 0">
-            <li>
-                <a href="https://github.com/huwprosser/clap-detection"
-                    >Clap Detection Model ConvNet</a
-                >
-            </li>
-            <li>
-                <a href="https://github.com/huwprosser/cluster-fk"
-                    >Cluster-Fk (Image clustering with KNN)</a
-                >
-            </li>
-            <li>
-                <a href="https://github.com/huwprosser/web-whisper"
-                    >Whisper ASR in the browser</a
-                >
-            </li>
-        </ul>
-        <p style="padding-top: 50px">Build neat stuff 🚀</p>
+                    <td colspan="1">
+                        <p class="project-description pad-5">Est. 2008</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="project-content">
+                            <p class="project-description">
+                                In 2008 Tony Stark's Jarvis appeared in the
+                                first Iron Man movie. I've been working on a
+                                real-life version ever since. In 2020 I began
+                                documenting this passion on TikTok. This quickly
+                                led to viral success as people shared their
+                                interest in the project. If I'm being honest,
+                                despite recent advancements in AI, this is a
+                                project I just can't put down.
+                            </p>
+                            <a
+                                class="button"
+                                target="_blank"
+                                href="https://tiktok.com/@huwprosser"
+                            >
+                                WATCH NOW
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-        <!-- <h2 style="text-align: center; padding-top: 20px">posts</h2>
-        <ul style="list-style: none; text-align: center; padding: 0"></ul> -->
+            <p class="subtitle projects-title">OPEN SOURCE PROJECTS</p>
+            <div class="os-projects">
+                <table class="os-project">
+                    <tr class="os-title-box">
+                        <th>Jarvis MLX</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    A basic starter project for people wanting
+                                    to build an AI assistant on Apple Silicon.
+                                    It includes ASR, LLM & TTS.
+                                </p>
+                                <a
+                                    class="os-button"
+                                    target="_blank"
+                                    href="https://github.com/huwprosser/jarvis-mlx"
+                                >
+                                    GitHub
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="os-project">
+                    <tr class="os-title-box">
+                        <th>Clap Detection</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    A clap detection model using a ConvNet.
+                                    Designed to replicate the functionality seen
+                                    in Iron Man 2. Built LIVE on TikTok.
+                                </p>
+                                <a
+                                    class="os-button"
+                                    target="_blank"
+                                    href="https://github.com/huwprosser/clap-detection"
+                                >
+                                    GitHub
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="os-project">
+                    <tr class="os-title-box">
+                        <th>Cluster-Fk</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Image clustering with KNN. Used for face
+                                    recognition projects and image sorting.
+                                </p>
+                                <a
+                                    class="os-button"
+                                    target="_blank"
+                                    href="https://github.com/huwprosser/cluster-fk"
+                                >
+                                    GitHub
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="os-project">
+                    <tr class="os-title-box">
+                        <th>Web Whisper</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Whisper ASR in the browser. Using a FastAPI
+                                    server, Websockets and voice activity
+                                    detection.
+                                </p>
+                                <a
+                                    class="os-button"
+                                    target="_blank"
+                                    href="https://github.com/huwprosser/web-whisper"
+                                >
+                                    GitHub
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <p class="subtitle projects-title">OLDER PROJECTS</p>
+            <!-- Blooware  -->
+            <table class="project">
+                <colgroup>
+                    <col span="5" width="16.67%" />
+                    <col width="16.67%" />
+                </colgroup>
+                <tr>
+                    <th colspan="5">
+                        <h4 class="project-title">Blooware Technologies</h4>
+                    </th>
+
+                    <td colspan="1">
+                        <p class="project-description pad-5">Est. 2016</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <div class="project-content">
+                            <p class="project-description">
+                                At age 17, I started Blooware to automate SMEs
+                                in the UK with Machine Learning. We worked with
+                                companies in E-commerce, consumer apps, sports,
+                                construction logistics, construction and UXO.
+                                Blooware wrapped up in 2021. We successfully
+                                worked over multiple years with 10+ companies.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text" onclick="revealEmail()">
+                Contact me - Click to reveal email (AI scrapers are a thing now)
+            </p>
+        </footer>
     </body>
-    <script src="/index.js"></script>
+
+    <script>
+        function revealEmail() {
+            const email = "aHV3QGNhcnRlci5jaGF0";
+            document.querySelector(".footer-text").textContent = atob(email);
+        }
+    </script>
 </html>
