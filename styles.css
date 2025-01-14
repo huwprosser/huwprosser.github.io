@@ -268,10 +268,21 @@ a {
 /* Social Grid */
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1ch;
     width: calc(round(down, 100%, 1ch));
 }
+
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .bio-link {
+        width: 100%;
+    }
+}
+
 .bio-link {
     text-decoration: none;
     color: var(--text-color);
@@ -281,6 +292,34 @@ a {
     font-size: 1.2rem;
     margin: 0px;
     text-align: center;
+}
+
+.main-link-container {
+    width: 100%;
+    display: flex;
+}
+
+.main-link-image {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main-link {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--background-color-alt);
+    padding: 10px 15px;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 @media (max-width: 768px) {
