@@ -3,6 +3,7 @@ import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import React from "react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 config.autoAddCss = false;
 
@@ -37,7 +38,10 @@ export default function RootLayout({
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
                 />
             </head>
-            <body>{children}</body>
+            <body>
+                <GoogleAnalytics />
+                {children}
+            </body>
         </html>
     );
 }
