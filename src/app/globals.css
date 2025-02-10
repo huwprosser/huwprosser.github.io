@@ -227,7 +227,7 @@ a {
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 1rem;
     margin: 2rem 0;
 }
@@ -237,7 +237,6 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 .bio-link {
     text-decoration: none;
     color: inherit;
@@ -246,6 +245,16 @@ a {
     border-radius: 0;
     text-align: center;
     transition: all 0.2s ease;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0px;
+}
+
+.bio-link span {
+    margin: 0rem;
 }
 
 .bio-link:hover {

@@ -5,6 +5,7 @@ import {
     faYoutube,
     faTiktok,
     faGithub,
+    faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
@@ -50,14 +51,31 @@ export default function Home() {
 
             <div className="social-grid">
                 <a
+                    href="https://tiktok.com/@huwprosser"
+                    className="bio-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <FontAwesomeIcon icon={faTiktok} size="xl" />
+                    {/* <span className="ml-2">tiktok</span> */}
+                </a>
+                <a
+                    href="https://x.com/@huwprosser_"
+                    className="bio-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <FontAwesomeIcon icon={faXTwitter} size="xl" />
+                    {/* <span className="ml-2">X</span> */}
+                </a>
+                <a
                     href="https://www.instagram.com/huwprosser?igsh=Y3N1YzlpaHZsaWNz"
                     className="bio-link"
                     target="_blank"
                     rel="noopener"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faInstagram} /> instagram
-                    </div>
+                    <FontAwesomeIcon icon={faInstagram} size="xl" />
+                    {/* <span className="ml-2">instagram</span> */}
                 </a>
                 <a
                     href="https://www.youtube.com/@huwprosser"
@@ -65,40 +83,28 @@ export default function Home() {
                     target="_blank"
                     rel="noopener"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faYoutube} /> youtube
-                    </div>
+                    <FontAwesomeIcon icon={faYoutube} size="xl" />
+                    {/* <span className="ml-2">youtube</span> */}
                 </a>
-                <a
-                    href="https://tiktok.com/@huwprosser"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <div>
-                        <FontAwesomeIcon icon={faTiktok} /> tiktok
-                    </div>
-                </a>
+
                 <a
                     href="https://github.com/huwprosser"
                     className="bio-link"
                     target="_blank"
                     rel="noopener"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faGithub} /> github
-                    </div>
+                    <FontAwesomeIcon icon={faGithub} size="xl" />
+                    {/* <span className="ml-2">github</span> */}
                 </a>
-                <a
+                {/* <a
                     href="https://www.xiaohongshu.com/user/profile/67858376000000000803d733"
                     className="bio-link"
                     target="_blank"
                     rel="noopener"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faBook} /> rednote
-                    </div>
-                </a>
+                    <FontAwesomeIcon icon={faBook} size="xl" />
+                    {/* <span className="ml-2">rednote</span>
+                </a> */}
             </div>
 
             <div className="content">
