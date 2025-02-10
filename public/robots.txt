@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://huwprosser.github.io/sitemap.xml 
