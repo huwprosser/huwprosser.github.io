@@ -234,7 +234,7 @@ a {
 
 @media (max-width: 768px) {
     .social-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 .bio-link {
@@ -428,4 +428,50 @@ a {
     border-radius: 0;
     margin: 1rem 0;
     border: var(--border-thickness) solid var(--text-color);
+}
+
+/* Tab styles */
+.tabs-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 2rem;
+    border-bottom: var(--border-thickness) solid var(--text-color-alt);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.tab {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color-alt);
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+.tab.active {
+    color: var(--text-color);
+}
+
+.tab-underline {
+    position: absolute;
+    bottom: calc(-1 * var(--border-thickness));
+    height: var(--border-thickness);
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
 }
