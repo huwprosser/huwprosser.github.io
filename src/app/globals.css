@@ -7,7 +7,7 @@
 :root {
     --font-family: "JetBrains Mono", monospace;
     --line-height: 1.2rem;
-    --border-thickness: 2px;
+    --border-thickness: 1.5px;
     --text-color: #000;
     --text-color-alt: #666;
     --background-color: #f5f5f5;
