@@ -78,11 +78,11 @@ export default function Home() {
                         <th>Current</th>
                         <td className="minor-text">
                             <a
-                                href="https://carter.chat"
+                                href="carter-app://home"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                Carter Labs
+                                Carter Labs M
                             </a>
                         </td>
                     </tr>
