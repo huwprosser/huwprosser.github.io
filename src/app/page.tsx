@@ -78,7 +78,7 @@ export default function Home() {
                         <th>Current</th>
                         <td className="minor-text">
                             <a
-                                href="carter-app://home"
+                                href="carter-app://home?pet=cat"
                                 target="_blank"
                                 rel="noopener"
                             >
