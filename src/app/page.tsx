@@ -78,11 +78,11 @@ export default function Home() {
                         <th>Current</th>
                         <td className="minor-text">
                             <a
-                                href="carter-app://home?pet=cat"
+                                href="carter-app://home?source=huwprosser"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                Carter Labs M
+                                Carter Labs
                             </a>
                         </td>
                     </tr>
