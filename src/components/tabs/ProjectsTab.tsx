@@ -35,7 +35,7 @@ export default function ProjectsTab() {
                                     . We discovered that AI characters were an
                                     incredibly compelling experience outside of
                                     games too. Our latest direct-to-consumer app
-                                    and website, carter.chat allows users to
+                                    and website, carterlabs.ai allows users to
                                     create, meet and share characters powered by
                                     state-of-the-art AI.
                                 </p>
@@ -43,7 +43,7 @@ export default function ProjectsTab() {
                                     className="button"
                                     target="_blank"
                                     rel="noopener"
-                                    href="https://carter.chat?utm_source=huwprosser.github.io"
+                                    href="https://carterlabs.ai?utm_source=huwprosser.github.io"
                                 >
                                     VISIT SITE
                                 </a>
