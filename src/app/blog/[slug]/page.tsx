@@ -28,6 +28,7 @@ export async function generateStaticParams() {
         "why",
         "building-jarvis-in-real-life",
         "betting-on-the-browser",
+        "vr-is-cooked",
     ];
     return posts.map((slug) => ({ slug }));
 }
