@@ -78,7 +78,7 @@ export default function Home() {
                         <th>Current</th>
                         <td className="minor-text">
                             <a
-                                href="carter-app://home?source=huwprosser"
+                                href="https://carterlabs.ai"
                                 target="_blank"
                                 rel="noopener"
                             >

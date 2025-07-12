@@ -3,6 +3,17 @@ import Link from "next/link";
 export default function BlogTab() {
     return (
         <div className="blog-posts">
+            <Link href="/blog/vr-is-cooked" className="blog-post-link">
+                <div className="blog-post">
+                    <h3>VR is Cooked</h3>
+                    <p className="blog-post-date">July 13, 2025</p>
+                    <p className="blog-post-excerpt">
+                        The VR industry is stuck in a loop, rehashing the same
+                        concepts. Let's stop playing god and build something
+                        people would actually use.
+                    </p>
+                </div>
+            </Link>
             <Link
                 href="/blog/betting-on-the-browser"
                 className="blog-post-link"
