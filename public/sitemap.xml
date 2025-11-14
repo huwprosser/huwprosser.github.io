@@ -6,24 +6,5 @@
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://huwprosser.github.io/blog/vr-is-cooked</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://huwprosser.github.io/blog/betting-on-the-browser</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://huwprosser.github.io/blog/building-jarvis-in-real-life</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://huwprosser.github.io/blog/why</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
+    
 </urlset>

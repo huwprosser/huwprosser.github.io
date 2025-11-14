@@ -1,3 +1,9 @@
+---
+title: "VR is Cooked"
+date: "2025-07-13"
+excerpt: "The VR industry is stuck in a loop, rehashing the same concepts. Let's stop playing god and build something people would actually use."
+---
+
 ### VR is Cooked.
 
 We keep rehashing the same thing.

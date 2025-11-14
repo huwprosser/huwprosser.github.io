@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         description: "Building things with AI since 2008",
         url: "https://huwprosser.github.io/",
         siteName: "huwprosser.github.io",
-        locale: "en_US",
+        locale: "en_GB",
         type: "website",
     },
     twitter: {

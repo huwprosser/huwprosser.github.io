@@ -1,3 +1,9 @@
+---
+title: "Betting on the Browser"
+date: "2023-10-18"
+excerpt: "Why we're focusing on browser-based AI experiences."
+---
+
 At Carter Labs, we've made a strategic decision to focus on browser-based AI experiences. Here's why we believe the browser is the future of AI applications.
 
 ## The Power of the Web

@@ -1,3 +1,9 @@
+---
+title: "Building Jarvis in Real Life"
+date: "2022-10-23"
+excerpt: "The journey of building a real-life Jarvis AI assistant."
+---
+
 Since 2008, I've been fascinated by the idea of building a real-life J.A.R.V.I.S. What started as a childhood dream has evolved into a serious technical project, combining various AI technologies to create a truly intelligent assistant.
 
 ## The Journey

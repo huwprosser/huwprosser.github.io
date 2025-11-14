@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "d3998e74c00c8b83",
+    "type": "split",
+    "children": [
+      {
+        "id": "b818c6d0e2b6d0f9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b187f7df0788f5c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "The inevitable decay of every blog service..md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "The inevitable decay of every blog service."
+            }
+          },
+          {
+            "id": "460f958cc037d541",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "betting-on-the-browser.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "betting-on-the-browser"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e5eec0fc79f485c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "b747652b9b10853a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be6b5fc6f3a45b93",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7a2325698a0a70ce",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "10e7fc999ad1f7e5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0bea61327e21202e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d2723f2e0f83714",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30aba531bf527602",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "The inevitable decay of every blog service..md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for The inevitable decay of every blog service."
+            }
+          },
+          {
+            "id": "ae20c569703b3c9d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "The inevitable decay of every blog service..md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from The inevitable decay of every blog service."
+            }
+          },
+          {
+            "id": "29734ef8f4b70ff0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2d8990903d0b4f8a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f5de8cc9c9cfc672",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "The inevitable decay of every blog service..md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of The inevitable decay of every blog service."
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b187f7df0788f5c2",
+  "lastOpenFiles": [
+    "betting-on-the-browser.md",
+    "The inevitable decay of every blog service..md",
+    "why.md",
+    "test.md",
+    "vr-is-cooked.md",
+    "building-jarvis-in-real-life.md"
+  ]
+}

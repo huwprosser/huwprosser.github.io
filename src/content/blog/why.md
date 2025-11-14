@@ -1,3 +1,9 @@
+---
+title: "Why?"
+date: "2023-11-12"
+excerpt: "Thoughts on building in public and sharing knowledge."
+---
+
 I've been building things with AI since 2008, when I first saw J.A.R.V.I.S in Iron Man. The idea of having an AI assistant that could help with everyday tasks was fascinating to me. I started by learning Python and building simple chatbots, and over the years, I've worked on various AI projects.
 
 ## Building in Public
