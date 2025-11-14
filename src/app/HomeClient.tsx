@@ -69,7 +69,9 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                             </p>
                         </td>
                         <th>Age</th>
-                        <td className="minor-text">26</td>
+                        <td className="minor-text">
+                            {new Date().getFullYear() - 1998}
+                        </td>
                     </tr>
                     <tr>
                         <th>Location</th>
@@ -80,7 +82,7 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                         <td className="minor-text">
                             Machine Learning Engineer, Founder, Content Creator
                         </td>
-                        <th>Current</th>
+                        <th>Building</th>
                         <td className="minor-text">
                             <a
                                 href="https://carterlabs.ai"

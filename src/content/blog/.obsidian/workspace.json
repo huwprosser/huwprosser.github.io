@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b818c6d0e2b6d0f9",
+        "id": "7b2be2a316e194b6",
         "type": "tabs",
         "children": [
           {
-            "id": "b187f7df0788f5c2",
+            "id": "8092a5a1653f305f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "the-inevitable-decay-of-every-blog-service.md",
+                "file": "lessons-learned-from-1-million-tiktok-followers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the-inevitable-decay-of-every-blog-service"
-            }
-          },
-          {
-            "id": "460f958cc037d541",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "betting-on-the-browser.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "betting-on-the-browser"
+              "title": "lessons-learned-from-1-million-tiktok-followers"
             }
           }
         ]
@@ -108,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "the-inevitable-decay-of-every-blog-service.md",
+                "file": "lessons-learned-from-1-million-tiktok-followers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for the-inevitable-decay-of-every-blog-service"
+              "title": "Backlinks for lessons-learned-from-1-million-tiktok-followers"
             }
           },
           {
@@ -127,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "the-inevitable-decay-of-every-blog-service.md",
+                "file": "lessons-learned-from-1-million-tiktok-followers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from the-inevitable-decay-of-every-blog-service"
+              "title": "Outgoing links from lessons-learned-from-1-million-tiktok-followers"
             }
           },
           {
@@ -170,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "the-inevitable-decay-of-every-blog-service.md",
+                "file": "lessons-learned-from-1-million-tiktok-followers.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the-inevitable-decay-of-every-blog-service"
+              "title": "Outline of lessons-learned-from-1-million-tiktok-followers"
             }
           }
         ]
@@ -197,10 +183,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "be6b5fc6f3a45b93",
+  "active": "8092a5a1653f305f",
   "lastOpenFiles": [
-    "betting-on-the-browser.md",
     "the-inevitable-decay-of-every-blog-service.md",
+    "lessons-learned-from-1-million-tiktok-followers.md",
+    "Untitled.md",
+    "betting-on-the-browser.md",
     "why.md",
     "test.md",
     "vr-is-cooked.md",
