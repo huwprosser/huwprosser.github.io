@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The inevitable decay of every blog service..md",
+                "file": "the-inevitable-decay-of-every-blog-service.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The inevitable decay of every blog service."
+              "title": "the-inevitable-decay-of-every-blog-service"
             }
           },
           {
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 451.5
   },
   "right": {
     "id": "0bea61327e21202e",
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "The inevitable decay of every blog service..md",
+                "file": "the-inevitable-decay-of-every-blog-service.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for The inevitable decay of every blog service."
+              "title": "Backlinks for the-inevitable-decay-of-every-blog-service"
             }
           },
           {
@@ -127,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "The inevitable decay of every blog service..md",
+                "file": "the-inevitable-decay-of-every-blog-service.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from The inevitable decay of every blog service."
+              "title": "Outgoing links from the-inevitable-decay-of-every-blog-service"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "The inevitable decay of every blog service..md",
+                "file": "the-inevitable-decay-of-every-blog-service.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of The inevitable decay of every blog service."
+              "title": "Outline of the-inevitable-decay-of-every-blog-service"
             }
           }
         ]
@@ -197,10 +197,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "b187f7df0788f5c2",
+  "active": "be6b5fc6f3a45b93",
   "lastOpenFiles": [
     "betting-on-the-browser.md",
-    "The inevitable decay of every blog service..md",
+    "the-inevitable-decay-of-every-blog-service.md",
     "why.md",
     "test.md",
     "vr-is-cooked.md",
