@@ -11,4 +11,6 @@ Dear internet. I've noticed lately that every great blog CMS seems to go through
 4. The Zuckerberg Dilemma - They realise that their blog site has quite a lot of traffic now, but blogger don't really want to pay enough to reach the deca-unicorn exit the dev now wants/needs. Time to run some ads, heck - we could even allow blogger to paywall content!
 5. Repeat.
 
-the internet will forever be shackled by the promise of the 🦄 
+the internet will forever be shackled by the promise of the 🦄 .
+
+anyway...wanna buy some ad space?
