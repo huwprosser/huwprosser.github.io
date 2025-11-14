@@ -9,6 +9,46 @@ export default function ProjectsTab() {
                 <tbody>
                     <tr>
                         <th colSpan={5}>
+                            <h4 className="project-title">DropVR</h4>
+                        </th>
+                        <td colSpan={1}>
+                            <p className="project-description pad-5">
+                                Est. 2025
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colSpan={6}>
+                            <div className="project-content">
+                                <p className="project-description">
+                                    Browser based AirDrop alternative built to
+                                    solve file transfer and text transfer
+                                    frustrations with Meta Quest 3 headsets.
+                                    WebRTC, Instant messaging, screensharing and
+                                    IP pooling. All over local network. Works
+                                    between any two devices on the same network.
+                                </p>
+                                <a
+                                    className="button"
+                                    target="_blank"
+                                    rel="noopener"
+                                    href="https://dropvr.com"
+                                >
+                                    VISIT SITE
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table className="project">
+                <colgroup>
+                    <col span={5} width="16.67%" />
+                    <col width="16.67%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th colSpan={5}>
                             <h4 className="project-title">Carter Labs</h4>
                         </th>
                         <td colSpan={1}>
