@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "the-inevitable-decay-of-every-blog-service.md",
+                "file": "lessons-learned-from-1-million-tiktok-followers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the-inevitable-decay-of-every-blog-service"
+              "title": "lessons-learned-from-1-million-tiktok-followers"
             }
           }
         ]
@@ -185,8 +185,8 @@
   },
   "active": "8092a5a1653f305f",
   "lastOpenFiles": [
-    "lessons-learned-from-1-million-tiktok-followers.md",
     "the-inevitable-decay-of-every-blog-service.md",
+    "lessons-learned-from-1-million-tiktok-followers.md",
     "Untitled.md",
     "betting-on-the-browser.md",
     "why.md",
