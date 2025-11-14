@@ -326,6 +326,7 @@ a {
 
 .post-title {
     font-size: 2rem;
+    line-height: 2.1rem;
     margin: 0;
     font-weight: var(--font-weight-bold);
 }
