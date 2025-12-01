@@ -6,7 +6,7 @@
 /* Base styles */
 :root {
     --font-family: "JetBrains Mono", monospace;
-    --line-height: 1.2rem;
+    --line-height: 1.6rem;
     --border-thickness: 1.5px;
     --text-color: #000;
     --text-color-alt: #666;
@@ -57,12 +57,12 @@ body {
     position: relative;
     width: 100%;
     margin: 0;
-    padding: var(--line-height) 2ch;
-    max-width: calc(min(80ch, round(down, 100%, 1ch)));
+    padding: var(--line-height) 0px;
+    max-width: 900px;
     line-height: var(--line-height);
     overflow-x: hidden;
 }
-
+/*// calc(min(80ch, round(down, 100%, 1ch)));*/
 .header h1 {
     margin: 0;
 }
@@ -227,7 +227,7 @@ a {
 
 .social-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(137px, 1fr));
     gap: 1rem;
     margin: 2rem 0;
 }
@@ -315,9 +315,9 @@ a {
 
 /* Post page styles */
 .post-container {
-    max-width: 700px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 16px;
 }
 
 .post-header {
@@ -434,7 +434,6 @@ a {
 /* Tab styles */
 .tabs-container {
     width: 100%;
-    margin-top: 2rem;
 }
 
 .tabs-header {
