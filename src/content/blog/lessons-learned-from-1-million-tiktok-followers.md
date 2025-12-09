@@ -4,7 +4,9 @@ date: 2025-11-10
 excerpt: Growth is overrated. Depth is underrated.
 ---
 
-Look around. Every single person you can see right now, likely is either holding or carrying their phone. For 60 seconds you can own all 3,013,524 pixels of their iPhone. Their FULL attention. That's rare in today's world and that's the value of posting content. Numbers are not a healthy thing to chase, but I wanted to post some thoughts on my numbers after a good amount of time to reflect.
+Look around. 
+
+Every single person you can see right now, likely is either holding or carrying their phone. For 60 seconds you can own all 3,013,524 pixels of their iPhone. Their FULL attention. That's rare in today's world and that's the value of posting content. Numbers are not a healthy thing to chase, but I wanted to post some thoughts on my numbers after a good amount of time to reflect.
 
 **Want 1 million TikTok followers?**
 
