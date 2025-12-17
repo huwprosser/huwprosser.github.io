@@ -15,7 +15,7 @@ export default function Footer() {
                     }
                 }}
             >
-                Contact me - Click to reveal email (AI scrapers are a thing now)
+                Contact me
             </p>
         </footer>
     );
