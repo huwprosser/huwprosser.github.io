@@ -72,7 +72,7 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                         <td className="minor-text">
                             {(() => {
                                 const now = new Date();
-                                const birth = new Date(1998, 8, 15);
+                                const birth = new Date(1998, 7, 15);
                                 let age =
                                     now.getFullYear() - birth.getFullYear();
                                 const m = now.getMonth() - birth.getMonth();
