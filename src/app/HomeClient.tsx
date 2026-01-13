@@ -70,7 +70,20 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                         </td>
                         <th>Age</th>
                         <td className="minor-text">
-                            {new Date().getFullYear() - 1998}
+                            {(() => {
+                                const now = new Date();
+                                const birth = new Date(1998, 2, 1); // March 1, 1998
+                                let age =
+                                    now.getFullYear() - birth.getFullYear();
+                                const m = now.getMonth() - birth.getMonth();
+                                if (
+                                    m < 0 ||
+                                    (m === 0 && now.getDate() < birth.getDate())
+                                ) {
+                                    age--;
+                                }
+                                return age;
+                            })()}
                         </td>
                     </tr>
                     <tr>
