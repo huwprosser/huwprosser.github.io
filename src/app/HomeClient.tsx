@@ -93,7 +93,8 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                     <tr>
                         <th>Role</th>
                         <td className="minor-text">
-                            Machine Learning Engineer, Founder, Content Creator
+                            Machine Learning Engineer, Founder @ Carter Labs,
+                            Content Creator
                         </td>
                         <th>Building</th>
                         <td className="minor-text">
@@ -119,6 +120,14 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                     <FontAwesomeIcon icon={faTiktok} size="xl" />
                 </a>
                 <a
+                    href="https://www.youtube.com/@huwprosser"
+                    className="bio-link"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <FontAwesomeIcon icon={faYoutube} size="xl" />
+                </a>
+                <a
                     href="https://x.com/@huwprosser_"
                     className="bio-link"
                     target="_blank"
@@ -134,14 +143,7 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                 >
                     <FontAwesomeIcon icon={faInstagram} size="xl" />
                 </a>
-                <a
-                    href="https://www.youtube.com/@huwprosser"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faYoutube} size="xl" />
-                </a>
+
                 <a
                     href="https://github.com/huwprosser"
                     className="bio-link"
