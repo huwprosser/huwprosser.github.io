@@ -58,7 +58,7 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
     };
 
     return (
-        <main>
+        <div className="content">
             <table className="header">
                 <tbody>
                     <tr>
@@ -239,6 +239,6 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
             </div>
 
             <Footer />
-        </main>
+        </div>
     );
 }
