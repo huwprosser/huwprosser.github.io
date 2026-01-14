@@ -21,8 +21,14 @@ async function getBlogPost(slug: string) {
         const processedContent = await remark().use(html).process(content);
         return {
             content: processedContent.toString(),
-            title: data.title || slug.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" "),
+            title:
+                data.title ||
+                slug
+                    .split("-")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" "),
             date: data.date || new Date().toISOString().split("T")[0],
+            video: data.video,
         };
     } catch {
         return null;
@@ -65,6 +71,25 @@ export default async function BlogPost({ params }: Props) {
                     })}
                 </p>
             </div>
+            {post.video && (
+                <div className="w-full aspect-video ">
+                    <iframe
+                        style={{
+                            width: "100%",
+                            borderRadius: "0.5rem",
+                            maxWidth: "none",
+                            aspectRatio: "16/9",
+                        }}
+                        src={`https://www.youtube.com/embed/${
+                            post.video.split("v=")[1]
+                        }`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+            )}
             <div
                 className="post-content"
                 dangerouslySetInnerHTML={{ __html: post.content }}

@@ -73,7 +73,7 @@ table {
     top: calc(var(--line-height) / 2);
     width: calc(round(down, 100%, 1ch));
     border-collapse: collapse;
-    margin: 0 0 calc(var(--line-height) * 2);
+    /* margin: 0 0 calc(var(--line-height) * 2); */
 }
 
 th,
