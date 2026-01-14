@@ -76,7 +76,6 @@ table {
     top: calc(var(--line-height) / 2);
     width: calc(round(down, 100%, 1ch));
     border-collapse: collapse;
-    margin: 0 0 calc(var(--line-height) * 2);
 }
 
 th,
@@ -442,7 +441,7 @@ a {
 .tabs-header {
     display: flex;
     gap: 2rem;
-    border-bottom: var(--border-thickness) solid var(--text-color-alt);
+
     margin-bottom: 2rem;
     position: relative;
 }
