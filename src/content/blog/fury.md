@@ -44,7 +44,7 @@ if __name__ == "__main__":
 ```
 
 Examples:
-- By far the most powerful example I have built so far is the coding agent. It is based on Pi.dev (powering OpenClaw) and offers compaction, AgentSkills terminal control out the box.
+- By far the most powerful example I have built so far is the coding agent. It is based on Pi.dev (powering OpenClaw) and offers compaction, extensible skills and terminal control out the box.
 - The CRON example shows you how to create an OpenClaw-style heartbeat system with Fury (room for improvement here).
 
 Pip package coming soon! For now, install directly from Github.
