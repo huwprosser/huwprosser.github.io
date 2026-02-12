@@ -5,7 +5,7 @@ excerpt: I built the agent wrapper I wish existed. No bells or whistles.
 ---
 I'm excited to open source Fury. A lightweight python package making it easy to build with LLMs, even if it's your first time. 
 
-https://github.com/huwprosser/fury
+[https://github.com/huwprosser/fury](https://github.com/huwprosser/fury)
 
 With Fury the following things work out-of-the-box:
 - Parallel Tool Calls
