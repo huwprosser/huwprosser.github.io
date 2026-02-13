@@ -8,6 +8,7 @@ import {
     faTiktok,
     faGithub,
     faXTwitter,
+    faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer";
@@ -26,7 +27,7 @@ interface HomeClientProps {
 export default function HomeClient({ blogPosts }: HomeClientProps) {
     const [activeTab, setActiveTab] = useState<TabId>("blog");
     const [underlineStyle, setUnderlineStyle] = useState<React.CSSProperties>(
-        {}
+        {},
     );
     const tabsRef = useRef<Record<TabId, HTMLDivElement | null>>({
         blog: null,
@@ -92,10 +93,7 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                     </tr>
                     <tr>
                         <th>Role</th>
-                        <td className="minor-text">
-                            Machine Learning Engineer, Founder @ Carter Labs,
-                            Content Creator
-                        </td>
+                        <td className="minor-text">ML Engineer</td>
                         <th>Building</th>
                         <td className="minor-text">
                             <a
@@ -128,12 +126,12 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
                     <FontAwesomeIcon icon={faYoutube} size="xl" />
                 </a>
                 <a
-                    href="https://x.com/@huwprosser_"
+                    href="https://discord.gg/xC9Yd6VH2a"
                     className="bio-link"
                     target="_blank"
                     rel="noopener"
                 >
-                    <FontAwesomeIcon icon={faXTwitter} size="xl" />
+                    <FontAwesomeIcon icon={faDiscord} size="xl" />
                 </a>
                 <a
                     href="https://www.instagram.com/huwprosser?igsh=Y3N1YzlpaHZsaWNz"
