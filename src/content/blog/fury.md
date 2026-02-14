@@ -2,6 +2,7 @@
 title: Fury
 date: 2026-02-12
 excerpt: I built the agent wrapper I wish existed. No bells or whistles.
+vido: https://www.youtube.com/watch?v=D-4nHVL6Xw8
 ---
 I'm excited to open source Fury. A lightweight python package making it easy to build with LLMs, even if it's your first time. 
 
@@ -14,33 +15,17 @@ With Fury the following things work out-of-the-box:
 - Audio input transcription.
 
 ```python
-import asyncio
 from fury import Agent
 
-async def main():
-    # Initialize the agent
-    agent = Agent(
-        model="your-model-name", # e.g., "gpt-4o" or a local model
-        system_prompt="You are a helpful assistant.",
-        base_url="http://127.0.0.1:8080/v1", # or https://openrouter.ai/api/v1, https://api.openai.com/v1
-        api_key="your-api-key"
-    )
+agent = Agent(
+    model="your-model-name",  # e.g., "gpt-4o" or a local model
+    system_prompt="You are a helpful assistant.",
+    base_url="http://127.0.0.1:8080/v1",  # or https://openrouter.ai/api/v1, https://api.openai.com/v1
+    api_key="your-api-key",
+)
 
-    history = []
-
-    # Simple chat loop
-    while True:
-        user_input = input("> ")
-        history.append({"role": "user", "content": user_input})
-
-        print()
-        async for chunk, reasoning, tool_call in agent.chat(history):
-            if chunk:
-                print(chunk, end="", flush=True)
-        print("\n")
-
-if __name__ == "__main__":
-    asyncio.run(main())
+response = agent.ask("Hello!", history=[])
+print(response)
 ```
 
 Examples:
