@@ -2,7 +2,7 @@
 title: Fury
 date: 2026-02-12
 excerpt: I built the agent wrapper I wish existed. No bells or whistles.
-vido: https://www.youtube.com/watch?v=D-4nHVL6Xw8
+video: https://www.youtube.com/watch?v=D-4nHVL6Xw8
 ---
 I'm excited to open source Fury. A lightweight python package making it easy to build with LLMs, even if it's your first time. 
 
