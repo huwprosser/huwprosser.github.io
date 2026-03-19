@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faInstagram,
-    faYoutube,
-    faTiktok,
-    faGithub,
-    faXTwitter,
-    faDiscord,
+  faInstagram,
+  faYoutube,
+  faTiktok,
+  faGithub,
+  faXTwitter,
+  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer";
@@ -21,222 +21,196 @@ import { BlogPost } from "@/lib/blog";
 type TabId = "blog" | "projects" | "opensource" | "archive";
 
 interface HomeClientProps {
-    blogPosts: BlogPost[];
+  blogPosts: BlogPost[];
 }
 
 export default function HomeClient({ blogPosts }: HomeClientProps) {
-    const [activeTab, setActiveTab] = useState<TabId>("blog");
-    const [underlineStyle, setUnderlineStyle] = useState<React.CSSProperties>(
-        {},
-    );
-    const tabsRef = useRef<Record<TabId, HTMLDivElement | null>>({
-        blog: null,
-        projects: null,
-        opensource: null,
-        archive: null,
-    });
+  const [activeTab, setActiveTab] = useState<TabId>("blog");
+  const [underlineStyle, setUnderlineStyle] = useState<React.CSSProperties>({});
+  const tabsRef = useRef<Record<TabId, HTMLDivElement | null>>({
+    blog: null,
+    projects: null,
+    opensource: null,
+    archive: null,
+  });
 
-    const updateUnderline = (tabId: TabId) => {
-        const tabElement = tabsRef.current[tabId];
-        if (tabElement) {
-            setUnderlineStyle({
-                width: `${tabElement.offsetWidth}px`,
-                left: `${tabElement.offsetLeft}px`,
-            });
-        }
-    };
+  const updateUnderline = (tabId: TabId) => {
+    const tabElement = tabsRef.current[tabId];
+    if (tabElement) {
+      setUnderlineStyle({
+        width: `${tabElement.offsetWidth}px`,
+        left: `${tabElement.offsetLeft}px`,
+      });
+    }
+  };
 
-    useEffect(() => {
-        updateUnderline(activeTab);
-        const handleResize = () => updateUnderline(activeTab);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, [activeTab]);
+  useEffect(() => {
+    updateUnderline(activeTab);
+    const handleResize = () => updateUnderline(activeTab);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [activeTab]);
 
-    const handleTabClick = (tabId: TabId) => {
-        setActiveTab(tabId);
-        updateUnderline(tabId);
-    };
+  const handleTabClick = (tabId: TabId) => {
+    setActiveTab(tabId);
+    updateUnderline(tabId);
+  };
 
-    return (
-        <div className="content">
-            <table className="header">
-                <tbody>
-                    <tr>
-                        <td colSpan={2} rowSpan={2}>
-                            <h1 className="title">Huw Prosser</h1>
-                            <p className="subtitle minor-text">
-                                Building things with AI since 2008
-                            </p>
-                        </td>
-                        <th>Age</th>
-                        <td className="minor-text">
-                            {(() => {
-                                const now = new Date();
-                                const birth = new Date(1998, 7, 15);
-                                let age =
-                                    now.getFullYear() - birth.getFullYear();
-                                const m = now.getMonth() - birth.getMonth();
-                                if (
-                                    m < 0 ||
-                                    (m === 0 && now.getDate() < birth.getDate())
-                                ) {
-                                    age--;
-                                }
-                                return age;
-                            })()}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Location</th>
-                        <td className="minor-text">London, UK</td>
-                    </tr>
-                    <tr>
-                        <th>Role</th>
-                        <td className="minor-text">ML Engineer</td>
-                        <th>Building</th>
-                        <td className="minor-text">
-                            <a
-                                href="https://carterlabs.ai"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                Carter Labs
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+  return (
+    <div className="content">
+      <table className="header">
+        <tbody>
+          <tr>
+            <td colSpan={2} rowSpan={2}>
+              <h1 className="title">Huw Prosser</h1>
+              <p className="subtitle minor-text">
+                Building things with AI since 2008
+              </p>
+            </td>
+            <th>Age</th>
+            <td className="minor-text">
+              {(() => {
+                const now = new Date();
+                const birth = new Date(1998, 7, 15);
+                let age = now.getFullYear() - birth.getFullYear();
+                const m = now.getMonth() - birth.getMonth();
+                if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
+                  age--;
+                }
+                return age;
+              })()}
+            </td>
+          </tr>
+          <tr>
+            <th>Location</th>
+            <td className="minor-text">London, UK</td>
+          </tr>
+          <tr>
+            <th>
+              Machine Learning Engineer, Content Creator, build of things.
+            </th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
 
-            <div className="social-grid">
-                <a
-                    href="https://tiktok.com/@huwprosser"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faTiktok} size="xl" />
-                </a>
-                <a
-                    href="https://www.youtube.com/@huwprosser"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faYoutube} size="xl" />
-                </a>
-                <a
-                    href="https://discord.gg/xC9Yd6VH2a"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faDiscord} size="xl" />
-                </a>
-                <a
-                    href="https://www.instagram.com/huwprosser?igsh=Y3N1YzlpaHZsaWNz"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faInstagram} size="xl" />
-                </a>
+      <div className="social-grid">
+        <a
+          href="https://tiktok.com/@huwprosser"
+          className="bio-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <FontAwesomeIcon icon={faTiktok} size="xl" />
+        </a>
+        <a
+          href="https://www.youtube.com/@huwprosser"
+          className="bio-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <FontAwesomeIcon icon={faYoutube} size="xl" />
+        </a>
+        <a
+          href="https://discord.gg/xC9Yd6VH2a"
+          className="bio-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <FontAwesomeIcon icon={faDiscord} size="xl" />
+        </a>
+        <a
+          href="https://www.instagram.com/huwprosser?igsh=Y3N1YzlpaHZsaWNz"
+          className="bio-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <FontAwesomeIcon icon={faInstagram} size="xl" />
+        </a>
 
-                <a
-                    href="https://github.com/huwprosser"
-                    className="bio-link"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <FontAwesomeIcon icon={faGithub} size="xl" />
-                </a>
+        <a
+          href="https://github.com/huwprosser"
+          className="bio-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <FontAwesomeIcon icon={faGithub} size="xl" />
+        </a>
+      </div>
+
+      <div className="content">
+        <div className="tabs-container">
+          <div className="tabs-header">
+            <div
+              className={`tab ${activeTab === "blog" ? "active" : ""}`}
+              onClick={() => handleTabClick("blog")}
+              ref={(el) => {
+                tabsRef.current.blog = el;
+              }}
+            >
+              BLOG
             </div>
-
-            <div className="content">
-                <div className="tabs-container">
-                    <div className="tabs-header">
-                        <div
-                            className={`tab ${
-                                activeTab === "blog" ? "active" : ""
-                            }`}
-                            onClick={() => handleTabClick("blog")}
-                            ref={(el) => {
-                                tabsRef.current.blog = el;
-                            }}
-                        >
-                            BLOG
-                        </div>
-                        <div
-                            className={`tab ${
-                                activeTab === "projects" ? "active" : ""
-                            }`}
-                            onClick={() => handleTabClick("projects")}
-                            ref={(el) => {
-                                tabsRef.current.projects = el;
-                            }}
-                        >
-                            PROJECTS
-                        </div>
-                        <div
-                            className={`tab ${
-                                activeTab === "opensource" ? "active" : ""
-                            }`}
-                            onClick={() => handleTabClick("opensource")}
-                            ref={(el) => {
-                                tabsRef.current.opensource = el;
-                            }}
-                        >
-                            OPEN SOURCE
-                        </div>
-                        <div
-                            className={`tab ${
-                                activeTab === "archive" ? "active" : ""
-                            }`}
-                            onClick={() => handleTabClick("archive")}
-                            ref={(el) => {
-                                tabsRef.current.archive = el;
-                            }}
-                        >
-                            ARCHIVE
-                        </div>
-                        <div className="tab-underline" style={underlineStyle} />
-                    </div>
-
-                    <div
-                        className={`tab-content ${
-                            activeTab === "blog" ? "active" : ""
-                        }`}
-                    >
-                        <BlogTab posts={blogPosts} />
-                    </div>
-
-                    <div
-                        className={`tab-content ${
-                            activeTab === "projects" ? "active" : ""
-                        }`}
-                    >
-                        <ProjectsTab />
-                    </div>
-
-                    <div
-                        className={`tab-content ${
-                            activeTab === "opensource" ? "active" : ""
-                        }`}
-                    >
-                        <OpenSourceTab />
-                    </div>
-
-                    <div
-                        className={`tab-content ${
-                            activeTab === "archive" ? "active" : ""
-                        }`}
-                    >
-                        <ArchiveTab />
-                    </div>
-                </div>
+            <div
+              className={`tab ${activeTab === "projects" ? "active" : ""}`}
+              onClick={() => handleTabClick("projects")}
+              ref={(el) => {
+                tabsRef.current.projects = el;
+              }}
+            >
+              PROJECTS
             </div>
+            <div
+              className={`tab ${activeTab === "opensource" ? "active" : ""}`}
+              onClick={() => handleTabClick("opensource")}
+              ref={(el) => {
+                tabsRef.current.opensource = el;
+              }}
+            >
+              OPEN SOURCE
+            </div>
+            <div
+              className={`tab ${activeTab === "archive" ? "active" : ""}`}
+              onClick={() => handleTabClick("archive")}
+              ref={(el) => {
+                tabsRef.current.archive = el;
+              }}
+            >
+              ARCHIVE
+            </div>
+            <div className="tab-underline" style={underlineStyle} />
+          </div>
 
-            <Footer />
+          <div
+            className={`tab-content ${activeTab === "blog" ? "active" : ""}`}
+          >
+            <BlogTab posts={blogPosts} />
+          </div>
+
+          <div
+            className={`tab-content ${
+              activeTab === "projects" ? "active" : ""
+            }`}
+          >
+            <ProjectsTab />
+          </div>
+
+          <div
+            className={`tab-content ${
+              activeTab === "opensource" ? "active" : ""
+            }`}
+          >
+            <OpenSourceTab />
+          </div>
+
+          <div
+            className={`tab-content ${activeTab === "archive" ? "active" : ""}`}
+          >
+            <ArchiveTab />
+          </div>
         </div>
-    );
+      </div>
+
+      <Footer />
+    </div>
+  );
 }
