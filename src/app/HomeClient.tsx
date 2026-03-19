@@ -64,32 +64,11 @@ export default function HomeClient({ blogPosts }: HomeClientProps) {
             <td colSpan={2} rowSpan={2}>
               <h1 className="title">Huw Prosser</h1>
               <p className="subtitle minor-text">
-                Building things with AI since 2008
+                Machine Learning Engineer, content creator, builder of things.
               </p>
             </td>
-            <th>Age</th>
-            <td className="minor-text">
-              {(() => {
-                const now = new Date();
-                const birth = new Date(1998, 7, 15);
-                let age = now.getFullYear() - birth.getFullYear();
-                const m = now.getMonth() - birth.getMonth();
-                if (m < 0 || (m === 0 && now.getDate() < birth.getDate())) {
-                  age--;
-                }
-                return age;
-              })()}
-            </td>
-          </tr>
-          <tr>
             <th>Location</th>
             <td className="minor-text">London, UK</td>
-          </tr>
-          <tr>
-            <th>
-              Machine Learning Engineer, Content Creator, build of things.
-            </th>
-            <td></td>
           </tr>
         </tbody>
       </table>
